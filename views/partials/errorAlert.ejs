@@ -1,0 +1,36 @@
+<% if (locals.alerts) { %>
+<div class="mt-5">
+  <% Object.keys(alerts).forEach((key) => { %> <% alerts[key].forEach((alert) =>
+  { %>
+  <div
+    class="alert-font-size mt-2 alert alert-<%= key %> alert-dismissible fade show"
+    role="alert"
+  >
+    <%= alert %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <% }) %> <% }) %> <% } %>
+</div>
+
+<% if (locals.error) { %>
+<div class="mt-5">
+  <div
+    class="alert-font-size mt-2 alert alert-danger alert-dismissible fade show"
+    role="alert"
+  >
+    <%=error.status + " | " + error.message %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+</div>
+
+<%}%>

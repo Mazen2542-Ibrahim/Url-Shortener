@@ -1,0 +1,32 @@
+:root {
+  --coler: hsl(219, 47%, 32%);
+  --hovcoler: hsl(219, 47%, 50%);
+}
+
+a {
+  font-weight: 600;
+  color: var(--coler);
+  text-decoration: none;
+}
+
+.alert-font-size {
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
+}
+
+.table-text-size {
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
+}
+
+.short-url a {
+  /* font-size: 1.8rem; */
+  font-size: clamp(0.8rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--coler);
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border: thick dashed var(--coler);
+}
+
+a:hover {
+  color: var(--hovcoler);
+}
